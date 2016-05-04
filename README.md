@@ -13,7 +13,11 @@
 
 ### 前端编码规范
 
-- [JavaScript编码规范](javascript-style.md)
+- [JavaScript编码规范](javascript.md)
+- [HTML编码规范](html.md)
+- [CSS编码规范](css.md)
+- [Less编码规范](less.md)
+- [E-JSON编码规范](e-json.md)
 
 ### PHP编码规范
 PHP的编码规范主要采用php-fig制定了一系列PHP开发规范,简称PSR.
