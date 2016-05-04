@@ -17,6 +17,7 @@
 
 ### PHP编码规范
 PHP的编码规范主要采用php-fig制定了一系列PHP开发规范,简称PSR.
+
 FIG是框架互操作工作组（Framework Interoperability Group）的简称,PSR是PHP标准推荐（PHP Standard Recommendation）的缩写.FIG-PHP工作组最初是源于项目代表讨论两个项目之间的共性时,找出可以共事的方式.主要的受众是双方项目组，但PHP界的其他人也在观望.如果其他人愿意采用这里的规范,那么欢迎,但这并非工作组的目标,工作组中没人会告诉你如何来建造应用.
 
 - [PHP基础编码规范](php-psr-1.md)
