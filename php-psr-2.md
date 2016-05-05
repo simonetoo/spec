@@ -1,7 +1,7 @@
 ## 代码风格规范
 本篇规范是 [PHP基础编码规范](php-psr-1.md) 基本代码规范的继承与扩展。
 
-### 概览
+### 1. 概览
 - 代码`必须(MUST)`遵循 [PHP基础编码规范](php-psr-1.md).
 - 代码`必须(MUST)`使用4个空格符而不是 `tab键` 进行缩进。
 - 每行的字符数`应该(SHOULD)`软性保持在`80`个之内， 理论上`一定不可(MUST NOT)`多于`120`个， 但`一定不能(MUST NOT)`有硬性限制。
@@ -13,7 +13,7 @@
 - 控制结构的开始花括号( `{` )`必须(MUST)`写在声明的同一行，而结束花括号( `}` )`必须(MUST)`写在主体后自成一行。
 - 控制结构的开始左括号后和结束右括号前，都`一定不能(MUST NOT)`有空格符。
 
-#### 例子
+#### 1.1. 例子
 以下例子程序简单地展示了以上大部分规范：
 
 ```php
@@ -44,19 +44,19 @@ class Foo extends Bar implements FooInterface
 }
 ```
 
-### 通则
+### 2. 通则
 
-#### 基本编码准则
+#### 2.1. 基本编码准则
 代码`必须(MUST)`符合 [PHP基础编码规范](php-psr-1.md) 中的所有规范。
 
-#### 文件
+#### 2.2. 文件
 所有PHP文件`必须(MUST)`使用`Unix LF (linefeed)`作为行的结束符。
 
 所有PHP文件`必须(MUST)`以一个空白行作为结束。
 
 纯PHP代码文件`必须(MUST)`省略最后的 `?>` 结束标签。
 
-#### 行
+#### 2.3. 行
 
 行的长度`一定不能(MUST NOT)`有硬性的约束。
 
@@ -70,19 +70,19 @@ class Foo extends Bar implements FooInterface
 
 每行`一定不能(MUST NOT)`存在多于一条语句。
 
-#### 缩进
+#### 2.4. 缩进
 代码`必须(MUST)`使用`4`个空格符的缩进，`一定不能(MUST NOT)`用 `tab键` 。
 
 >备注: 使用空格而不是 `tab键` 缩进的好处在于，
 >避免在比较代码差异、打补丁、重阅代码以及注释时产生混淆。
 >并且，使用空格缩进，让对齐变得更方便。
 
-#### 关键字 以及 True/False/Null
+#### 2.5. 关键字 以及 True/False/Null
 PHP所有 关键字`必须(MUST)`全部小写。
 
 常量 `true` 、`false` 和 `null` 也`必须(MUST)`全部小写。
 
-### namespace 以及 use 声明
+### 3. namespace 以及 use 声明
 `namespace` 声明后 `必须(MUST)` 插入一个空白行。
 
 所有 `use` `必须(MUST)` 在 `namespace` 后声明。
@@ -104,10 +104,10 @@ use OtherVendor\OtherPackage\BazClass;
 // ... additional PHP code ...
 ```
 
-### 类、属性和方法
+### 4. 类、属性和方法
 此处的“类”泛指所有的`class`类、`接口`以及`traits`可复用代码块。
 
-#### 扩展与继承
+#### 4.1. 扩展与继承
 关键词 `extends` 和 `implements` `必须(MUST)`写在类名称的同一行。
 
 类的开始花括号`必须(MUST)`独占一行，结束花括号也`必须(MUST)`在类主体后独占一行。
@@ -145,7 +145,7 @@ class ClassName extends ParentClass implements
 }
 ```
 
-#### 属性
+#### 4.2. 属性
 每个属性都`必须(MUST)`添加访问修饰符。
 
 `一定不可(MUST NOT)`使用关键字 `var` 声明一个属性。
@@ -166,7 +166,7 @@ class ClassName
 }
 ```
 
-#### 方法
+#### 4.3. 方法
 所有方法都`必须(MUST)`添加访问修饰符。
 
 不要使用下划线作为前缀，来区分方法是 `protected` 或 `private`。
@@ -188,7 +188,7 @@ class ClassName
 }
 ```
 
-#### 方法的参数
+#### 4.4. 方法的参数
 参数列表中，每个参数后面`必须(MUST)`要有一个空格，而前面`一定不能(MUST NOT)`有空格。
 
 有默认值的参数，`必须(MUST)`放到参数列表的末尾。
@@ -225,7 +225,7 @@ class ClassName
 }
 ```
 
-#### abstract 、 final 、 以及 static
+#### 4.5. abstract 、 final 、 以及 static
 需要添加 `abstract` 或 `final` 声明时， `必须(MUST)`写在访问修饰符前，而 `static` 则`必须(MUST)`写在其后。
 
 ```php
@@ -245,7 +245,7 @@ abstract class ClassName
 }
 ```
 
-#### 方法及函数调用
+#### 4.6. 方法及函数调用
 方法及函数调用时，方法名或函数名与参数左括号之间`一定不能(MUST NOT)`有空格，参数右括号前也 `一定不能(MUST NOT)`有空格。每个参数前`一定不能(MUST NOT)`有空格，但其后`必须(MUST)`有一个空格。
 
 ```php
@@ -266,7 +266,7 @@ $foo->bar(
 );
 ```
 
-### 控制结构
+### 5. 控制结构
 控制结构的基本规范如下：
 
 - 控制结构关键词后`必须(MUST)`有一个空格。
@@ -280,9 +280,10 @@ $foo->bar(
 
 这能让结构体更加结构话，以及减少加入新行时，出错的可能性。
 
-#### if 、 elseif 和 else
+#### 5.1. if 、 elseif 和 else
 标准的 `if` 结构如下代码所示，留意 括号、空格以及花括号的位置，
-注意 `else` 和 `elseif` 都与前面的结束花括号在同一行。
+
+>注意 `else` 和 `elseif` 都与前面的结束花括号在同一行。
 
 ```php
 <?php
@@ -296,7 +297,7 @@ if ($expr1) {
 ```
 `应该(SHOULD)`使用关键词 `elseif` 代替所有 `else if` ，以使得所有的控制关键字都像是单独的一个词。
 
-#### switch 和 case
+#### 5.2. switch 和 case
 标准的 `switch` 结构如下代码所示，留意括号、空格以及花括号的位置。
 `case` 语句`必须(MUST)`相对 `switch` 进行一次缩进，而 `break` 语句以及 `case` 内的其它语句都 `必须(MUST)` 相对 `case` 进行一次缩进。
 如果存在非空的 `case` 直穿语句，主体里`必须(MUST)`有类似 `// no break` 的注释。
@@ -321,7 +322,7 @@ switch ($expr) {
 }
 ```
 
-#### while 和 do while
+#### 5.3. while 和 do while
 一个规范的 `while` 语句`应该(SHOULD)`如下所示，注意其 括号、空格以及花括号的位置。
 
 ```php
@@ -340,7 +341,7 @@ do {
 } while ($expr);
 ```
 
-#### for
+#### 5.4. for
 标准的 `for` 语句如下所示，注意其 括号、空格以及花括号的位置。
 
 ```php
@@ -350,7 +351,7 @@ for ($i = 0; $i < 10; $i++) {
 }
 ```
 
-#### foreach
+#### 5.5. foreach
 标准的 `foreach` 语句如下所示，注意其 括号、空格以及花括号的位置。
 
 ```php
@@ -360,7 +361,7 @@ foreach ($iterable as $key => $value) {
 }
 ```
 
-#### try, catch
+#### 5.6. try, catch
 标准的 `try` `catch` 语句如下所示，注意其 括号、空格以及花括号的位置。
 
 ```php
@@ -374,7 +375,7 @@ try {
 }
 ```
 
-### 闭包
+### 6. 闭包
 闭包声明时，关键词 `function` 后以及关键词 `use` 的前后都`必须(MUST)`要有一个空格。
 
 开始花括号`必须(MUST)`写在声明的同一行，结束花括号`必须(MUST)`紧跟主体结束的下一行。
@@ -448,7 +449,8 @@ $shortArgs_longVars = function ($arg) use (
    // body
 };
 ```
-注意，闭包被直接用作函数或方法调用的参数时，以上规则仍然适用。
+
+>注意，闭包被直接用作函数或方法调用的参数时，以上规则仍然适用。
 
 ```php
 <?php
